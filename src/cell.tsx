@@ -1,13 +1,19 @@
+//cell for maze 
 export class Cell {
-    northEdge: boolean = true;
-    eastEdge: boolean = true;
-    westEdge: boolean = true;
-    southEdge: boolean = true;
-    // ...
-    
-    constructor(
-      public readonly row: number = 0,
-      public readonly col: number = 0
-    ) {}
-    // ...
+    visited: boolean;
+    up: boolean;
+    right: boolean;
+    down: boolean;
+    left: boolean;
+    x: any;
+    y: any;
+    constructor(x, y) {
+      this.visited = false;
+      this.up = true;
+      this.right = true;
+      this.down = true;
+      this.left = true;
+      this.x = x;
+      this.y = y;
+    }
   }
